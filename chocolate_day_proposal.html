@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Chocolate Day, My Queen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 36px;
+            color: #8b4513;
+            margin-bottom: 20px;
+        }
+        .chocolate-image {
+            width: 250px;
+            margin: 20px 0;
+        }
+        .message {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .quote {
+            font-size: 18px;
+            font-style: italic;
+            margin: 15px 0;
+            color: #8b4513;
+        }
+        .footer {
+            font-size: 16px;
+            color: #555;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        /* হার্ট ও চকলেট ঝরার এনিমেশন */
+        @keyframes falling {
+            from {top: -50px; opacity: 1;}
+            to {top: 100vh; opacity: 0;}
+        }
+        .heart, .choco {
+            position: absolute;
+            font-size: 30px;
+            animation: falling linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Happy Chocolate Day, My Queen! 💖</h1>
+
+        <!-- চকলেটের ছবি -->
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/19/20/chocolate-1281553_1280.jpg" alt="Chocolate" class="chocolate-image">
+
+        <div class="message">
+            <p>💝 **সায়মা, তুমি আমার জীবনের সবচেয়ে মিষ্টি অনুভূতি, যেমন চকলেট কখনো তার মিষ্টিতা হারায় না, তেমনি তুমি আমার হৃদয়ের চিরস্থায়ী মিষ্টি ভালোবাসা!**</p>
+            <p>🍫 **চকলেট যেমন মনের সব দুঃখ ভুলিয়ে দেয়, তেমনই তুমি আমার জীবনের সেই বিশেষ ব্যক্তি, যার এক ঝলক হাসি আমার পুরো দিনকে সুন্দর করে দেয়!**</p>
+        </div>
+
+        <!-- ভালোবাসার উক্তি -->
+        <div class="quote">💬 “তুমি যখন পাশে থাকো, পৃথিবীটা আরও মিষ্টি হয়ে যায়।”</div>
+        <div class="quote">💬 “তোমার ভালোবাসা চকলেটের মতোই মিষ্টি, কিন্তু তুমি চকলেট থেকেও মিষ্টি!”</div>
+        <div class="quote">💬 “সায়মা যদি হয় তাহফিমের চকলেট, তাহলে তাহফিম সেই সৌভাগ্যবান, যে চকলেটের আসল স্বাদ উপভোগ করতে পারে!”</div>
+
+        <!-- সারপ্রাইজ মেসেজ -->
+        <div class="message">
+            🎁 **সারপ্রাইজ:** <br>
+            **সায়মা & তাহফিম = 🍫💑 চকলেটের মতো মিষ্টি প্রেম 💖**
+        </div>
+
+        <div class="footer">
+            Always Yours, <br>
+            ❤️ Tahfim & Saima ❤️
+        </div>
+    </div>
+
+    <!-- হার্ট ও চকলেট এনিমেশন -->
+    <script>
+        function createFallingElement(type) {
+            const element = document.createElement("div");
+            element.classList.add(type);
+            element.innerHTML = type === "heart" ? "❤️" : "🍫";
+            document.body.appendChild(element);
+            element.style.left = Math.random() * 100 + "vw";
+            element.style.animationDuration = Math.random() * 3 + 2 + "s";
+            element.style.animationDelay = Math.random() * 2 + "s";
+            setTimeout(() => {
+                element.remove();
+            }, 5000);
+        }
+
+        setInterval(() => {
+            createFallingElement("heart");
+            createFallingElement("choco");
+        }, 500);
+    </script>
+
+</body>
+</html>
